@@ -18,8 +18,9 @@ export default function TodoForm({ onAdd }: TodoFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="todo-form" onSubmit={handleSubmit}>
       <input
+        className="input"
         type="text"
         placeholder="Título de la tarea"
         value={title}
@@ -27,12 +28,13 @@ export default function TodoForm({ onAdd }: TodoFormProps) {
         required
       />
       <input
+        className="input"
         type="text"
         placeholder="Descripción (opcional)"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button type="submit">Agregar tarea</button>
+      <button className="todo-form__submit" type="submit">+ Agregar</button>
     </form>
   );
 }

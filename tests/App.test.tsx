@@ -31,6 +31,6 @@ vi.mock('../src/hooks/useTasks', () => ({
 describe('Tasks page', () => {
   it('renders the heading', () => {
     render(<Tasks />);
-    expect(screen.getByText('Tasks')).toBeInTheDocument();
+    expect(screen.getByText('Task Manager')).toBeInTheDocument();
   });
 });

@@ -13,14 +13,12 @@ export default function EmailSummaryButton({ userEmail, tasks }: EmailSummaryBut
   const handleSendSummary = async () => {
     setSendingEmail(true);
     setEmailStatus('');
-
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ toEmail: userEmail, tasks }),
       });
-
       if (!response.ok) throw new Error('Error al enviar');
       setEmailStatus('✅ Email enviado correctamente.');
     } catch {
@@ -31,11 +29,11 @@ export default function EmailSummaryButton({ userEmail, tasks }: EmailSummaryBut
   };
 
   return (
-    <div>
-      <button onClick={handleSendSummary} disabled={sendingEmail}>
-        {sendingEmail ? 'Enviando...' : 'Enviar resumen por email'}
+    <div className="email-summary">
+      <button className="btn btn--primary" onClick={handleSendSummary} disabled={sendingEmail}>
+        {sendingEmail ? 'Enviando...' : '📧 Enviar resumen por email'}
       </button>
-      {emailStatus && <p>{emailStatus}</p>}
+      {emailStatus && <p className="status-msg">{emailStatus}</p>}
     </div>
   );
 }

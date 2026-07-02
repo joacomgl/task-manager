@@ -8,17 +8,24 @@ interface TodoItemProps {
 
 export default function TodoItem({ task, onToggle, onDelete }: TodoItemProps) {
   return (
-    <li>
+    <li className="task-item">
       <input
+        className="task-item__checkbox"
         type="checkbox"
         checked={task.completed}
         onChange={() => onToggle(task)}
       />
-      <span style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
-        {task.title}
-      </span>
-      {task.description && <small> — {task.description}</small>}
-      <button onClick={() => onDelete(task.id)}>Eliminar</button>
+      <div className="task-item__content">
+        <p className={`task-item__title${task.completed ? ' task-item__title--completed' : ''}`}>
+          {task.title}
+        </p>
+        {task.description && (
+          <p className="task-item__desc">{task.description}</p>
+        )}
+      </div>
+      <button className="btn btn--danger" onClick={() => onDelete(task.id)}>
+        Eliminar
+      </button>
     </li>
   );
 }

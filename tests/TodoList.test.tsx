@@ -17,7 +17,7 @@ describe('TodoList', () => {
 
   it('muestra mensaje cuando no hay tareas', () => {
     render(<TodoList tasks={[]} onToggle={vi.fn()} onDelete={vi.fn()} />);
-    expect(screen.getByText('No hay tareas todavía.')).toBeInTheDocument();
+    expect(screen.getByText('No hay tareas todavía. ¡Agregá la primera!')).toBeInTheDocument();
   });
 
   it('llama a onDelete al hacer clic en Eliminar', () => {

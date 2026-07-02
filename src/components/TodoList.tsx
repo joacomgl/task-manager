@@ -8,10 +8,12 @@ interface TodoListProps {
 }
 
 export default function TodoList({ tasks, onToggle, onDelete }: TodoListProps) {
-  if (tasks.length === 0) return <p>No hay tareas todavía.</p>;
+  if (tasks.length === 0) {
+    return <p className="task-list__empty">No hay tareas todavía. ¡Agregá la primera!</p>;
+  }
 
   return (
-    <ul>
+    <ul className="task-list">
       {tasks.map((task) => (
         <TodoItem key={task.id} task={task} onToggle={onToggle} onDelete={onDelete} />
       ))}
