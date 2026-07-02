@@ -8,7 +8,7 @@ import {
   signOut,
   type User,
 } from 'firebase/auth';
-import { auth } from '../services/firebase';
+import { auth } from '../config/firebase.config';
 
 export function useAuth() {
   const [user, setUser] = useState<User | null>(null);

@@ -8,7 +8,7 @@ import {
   query,
   orderBy,
 } from 'firebase/firestore';
-import { db } from './firebase';
+import { db } from '../config/firebase.config';
 import type { Task, NewTask } from '../types/task';
 
 const tasksRef = (userId: string) =>
