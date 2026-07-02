@@ -2,6 +2,7 @@ import { useAuth } from '../hooks/useAuth';
 import { useTasks } from '../hooks/useTasks';
 import TodoForm from '../components/TodoForm';
 import TodoList from '../components/TodoList';
+import EmailSummaryButton from '../components/EmailSummaryButton';
 
 export default function Tasks() {
   const { user, logout } = useAuth();
@@ -13,6 +14,10 @@ export default function Tasks() {
       <h1>Tasks</h1>
       <p>Sesión: {user?.email}</p>
       <button onClick={logout}>Cerrar sesión</button>
+
+      {user?.email && (
+        <EmailSummaryButton userEmail={user.email} tasks={tasks} />
+      )}
 
       <TodoForm onAdd={addTask} />
 
