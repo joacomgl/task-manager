@@ -7,7 +7,7 @@ import EmailSummaryButton from '../components/EmailSummaryButton';
 
 export default function Tasks() {
   const { user, logout } = useAuth();
-  const { tasks, loading, error, addTask, toggleComplete, removeTask } = useTasks(user?.uid);
+  const { tasks, loading, error, addTask, editTask, toggleComplete, removeTask } = useTasks(user?.uid);
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -29,7 +29,12 @@ export default function Tasks() {
         {loading && <p className="loading">Cargando tareas...</p>}
         {error && <p className="error-msg">{error}</p>}
         <div className="glass">
-          <TodoList tasks={tasks} onToggle={toggleComplete} onDelete={removeTask} />
+          <TodoList
+            tasks={tasks}
+            onToggle={toggleComplete}
+            onDelete={removeTask}
+            onEdit={editTask}
+          />
         </div>
         {user?.email && (
           <div className="glass">
