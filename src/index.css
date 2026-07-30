@@ -420,6 +420,37 @@ body::after {
   gap: 0.625rem;
 }
 
+/* ── FILTER BAR ──────────────────────────────────────────────── */
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background: var(--glass);
+  color: var(--text);
+}
+
+.filter-btn--active {
+  background: linear-gradient(135deg, var(--accent), var(--accent-end));
+  color: #fff;
+  border-color: transparent;
+}
+
 /* ── RESPONSIVE ──────────────────────────────────────────────── */
 @media (max-width: 480px) {
   .auth-card { padding: 1.5rem; }

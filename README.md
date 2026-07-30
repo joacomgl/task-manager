@@ -9,7 +9,7 @@ Esta aplicación combina tecnologías front-end de vanguardia, un backend server
 ## 🚀 Enlaces de Producción
 
 * **Repositorio de GitHub:** [https://github.com/joacomgl/task-manager](https://github.com/joacomgl/task-manager)
-* **Despliegue en Producción (Vercel):** [https://task-manager-eight-xi-63.vercel.app](task-manager-eight-xi-63.vercel.app) *(o la URL asignada en tu panel de control de Vercel)*
+* **Despliegue en Producción (Vercel):** [https://task-manager-eight-xi-63.vercel.app](https://task-manager-eight-xi-63.vercel.app)
 
 ---
 
@@ -19,7 +19,8 @@ Esta aplicación combina tecnologías front-end de vanguardia, un backend server
 - **Modo Oscuro/Claro Dinámico:** Selector de tema instantáneo mediante un botón de alternancia, gestionado a través de variables CSS nativas y un hook de React persistente.
 - **Autenticación Completa:** Inicio de sesión y registro de usuarios mediante Firebase Authentication, incluyendo soporte para credenciales locales (email/contraseña) e inicio de sesión social rápido con **Google**.
 - **Gestión de Tareas en Tiempo Real:** CRUD completo de tareas con sincronización en tiempo real mediante Firestore (actualizaciones sin necesidad de recargar la página).
-- **Filtros Inteligentes:** Clasificación de tareas en "Todas", "Pendientes" y "Completadas".
+- **Edición Inline de Tareas:** Cada tarea cuenta con un botón "Editar" que activa un formulario inline para modificar título y descripción sin salir de la vista, con botones de Guardar y Cancelar.
+- **Filtros Inteligentes:** Clasificación de tareas en "Todas", "Pendientes" y "Completadas" mediante una barra de filtros conectada a la función utilitaria `filterTasks`.
 - **Resumen por Correo Electrónico:** Un flujo backend serverless integrado con Amazon SES para enviar resúmenes HTML con el estado de tus tareas directamente a tu correo con un solo clic.
 
 ---
@@ -121,8 +122,8 @@ npm run test:watch
 La estructura de tests cubre:
 - **`App.test.tsx`:** Verifica el renderizado de la página principal de tareas con sus respectivos mocks de autenticación.
 - **`TodoForm.test.tsx`:** Comprueba la inserción de nuevas tareas y validaciones del formulario.
-- **`TodoList.test.tsx`:** Verifica el listado, la alternancia de completado y la eliminación de tareas.
-- **`helpers.test.ts`:** Valida la lógica pura de filtrado de tareas y formato de textos informativos.
+- **`TodoList.test.tsx`:** Verifica el listado, la alternancia de completado, la eliminación y la edición inline de tareas.
+- **`helpers.test.ts`:** Valida la lógica pura de la función `filterTasks` (casos: todas, pendientes y completadas), que además está integrada directamente en la barra de filtros de la UI (`Tasks.tsx`).
 
 ---
 
