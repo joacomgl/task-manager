@@ -9,7 +9,7 @@ Esta aplicación combina tecnologías front-end de vanguardia, un backend server
 ## 🚀 Enlaces de Producción
 
 * **Repositorio de GitHub:** [https://github.com/joacomgl/task-manager](https://github.com/joacomgl/task-manager)
-* **Despliegue en Producción (Vercel):** [https://task-manager-eight-xi-63.vercel.app](task-manager-eight-xi-63.vercel.app) *(o la URL asignada en tu panel de control de Vercel)*
+* **Despliegue en Producción (Vercel):** [https://task-manager-eight-xi-63.vercel.app](https://task-manager-eight-xi-63.vercel.app)
 
 ---
 
@@ -205,24 +205,12 @@ Esto asegura que cualquier ruta secundaria (como `/login`, `/register` o `/tasks
 
 ---
 
-## 🤖 Integración de la Inteligencia Artificial (IA) en el Desarrollo
+## 🤖 Uso de Inteligencia Artificial
 
-Este proyecto se ha desarrollado implementando metodologías de **Programación en Pareja impulsada por Inteligencia Artificial (AI Pair Programming)** utilizando el agente avanzado **Antigravity** de Google DeepMind. La IA no solo actuó como un autocompletador de código, sino como un colaborador integral en las distintas capas del ciclo de desarrollo:
+Este proyecto utilizó **AI Pair Programming** con el agente **Antigravity** de Google DeepMind como apoyo durante el desarrollo:
 
-1. **Scaffolding e Incepción Arquitectónica:**
-   - La IA ayudó a estructurar las carpetas del proyecto en subdirectorios claros (`/components`, `/hooks`, `/pages`, `/services`, `/routes`, `/types`, `/utils`) y estructuró las rutas de React Router 7 usando layouts declarativos y componentes de enrutamiento protegido.
+1. **Arquitectura y estructura del proyecto:** Se usó la IA como guía para organizar los módulos, definir la estructura de carpetas y configurar las rutas de React Router.
 
-2. **Desarrollo Backend Serverless:**
-   - Co-escribió el endpoint serverless `/api/send-email.ts` con tipado explícito para `VercelRequest` y `VercelResponse`.
-   - Implementó la configuración óptima del cliente de AWS SES e ideó la generación del cuerpo del correo en HTML, asegurando un diseño ordenado y visualmente legible para el usuario receptor.
+2. **Diseño visual y estilos:** La IA colaboró en la definición de la paleta de colores, los efectos glassmorphism y la implementación del sistema de temas claro/oscuro.
 
-3. **Interfaz y Diseño Visual (Glassmorphism & Tematización):**
-   - La IA colaboró en la creación de los estilos CSS modernos, sugiriendo paletas de color HSL armoniosas y efectos de desenfoque (`backdrop-filter: blur()`).
-   - Diseñó e implementó el hook `useTheme` junto con los cambios en las clases HTML y variables CSS raíz, asegurando que las transiciones de tema fueran dinámicas y libres de parpadeos no deseados.
-
-4. **Estrategia y Aislamiento de Pruebas (QA):**
-   - Configuración de Vitest para dar soporte a componentes React con DOM simulado (jsdom).
-   - La IA escribió los archivos de pruebas (`App.test.tsx`, `TodoForm.test.tsx`, `TodoList.test.tsx`) y diseñó mocks limpios para las llamadas del SDK de Firebase Auth (`useAuth`) y Firebase Firestore (`useTasks`), lo que permite correr la suite entera de forma offline con total seguridad y rapidez.
-
-5. **Resolución de Errores y Refactorización:**
-   - Asistió en la depuración de tipados complejos de TypeScript y resolvió errores comunes de inicialización de dependencias e importación de rutas.
+3. **Testing y depuración:** Se contó con asistencia para configurar Vitest, diseñar los mocks de Firebase y resolver errores de tipado en TypeScript.
