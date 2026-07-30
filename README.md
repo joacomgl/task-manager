@@ -9,7 +9,7 @@ Esta aplicación combina tecnologías front-end de vanguardia, un backend server
 ## 🚀 Enlaces de Producción
 
 * **Repositorio de GitHub:** [https://github.com/joacomgl/task-manager](https://github.com/joacomgl/task-manager)
-* **Despliegue en Producción (Vercel):** [https://task-manager-eight-xi-63.vercel.app](https://task-manager-eight-xi-63.vercel.app)
+* **Despliegue en Producción (Vercel):** [https://task-manager-eight-xi-63.vercel.app](task-manager-eight-xi-63.vercel.app) *(o la URL asignada en tu panel de control de Vercel)*
 
 ---
 
